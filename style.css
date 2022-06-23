@@ -1,41 +1,124 @@
 * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: sans-serif;
 }
 
 .container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.container > div {
+    padding: 25px 75px;
 }
 
 .sidebar {
     grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 1fr 5fr 5fr;
+    background-color: gray;
+}
+
+.sidebar .logo {
+    font-size: 36px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    font-size: 24px;
+    display: grid;
+    gap: 0.5em;
 }
 
 .header {
     grid-column: 2;
 }
 
-.first-row, .second-row {
+input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.first-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-bottom: 15px;
+}
+
+.first-row .user-header {
+    justify-self: end;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.second-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.second-row button {
+    width: 100px;
+    padding: 5px;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid rgba(0,0,175,1);
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.hello-user {
+    font-weight: bold;
+}
+
+.hello-user .greeting {
+    font-size: 18px;
+}
+
+.hello-user .user {
+    font-size: 30px;
 }
 
 .main-content {
     background-color: #bccbde;
     display: grid;
     grid-template-columns: 4fr 1fr;
+    gap: 25px;
 }
 
 .all-cards {
-    grid-rows: 1 / 2;
     display: grid;
-    gap: 75px;
+    gap: 25px;
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
 }
 
-.trending {
-    grid-column: 2;
-    grid-row: 2;
+.card {
+    background-color: white;
+    padding: 30px;
 }
+
+.all-cards .card {
+    height: 200px;
+}
+
+.all-cards .card .title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.announcements p {
+    font-size: 12px;
+}
+
