@@ -5,6 +5,14 @@
    font-family: sans-serif;
 }
 
+:root {
+    --vermilion: #e3170aff;
+    --french-blue: #1c77c3ff;
+    --cerulean-crayola: #39a9dbff;
+    --maximum-blue: #40bcd8ff;
+    --light-yellow: #fffbdbff;
+}
+
 .container {
     height: 100vh;
     display: grid;
@@ -20,11 +28,13 @@
     grid-row: 1 / -1;
     display: grid;
     grid-template-rows: 1fr 5fr 5fr;
-    background-color: gray;
+    background-color: var(--vermilion);
 }
 
 .sidebar .logo {
     font-size: 36px;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar ul {
@@ -36,6 +46,7 @@
 
 .header {
     grid-column: 2;
+    background-color: var(--french-blue);
 }
 
 input[type="search"] {
@@ -85,7 +96,7 @@ input[type="search"] {
 }
 
 .main-content {
-    background-color: #bccbde;
+    background-color: var(--maximum-blue);
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 25px;
@@ -100,7 +111,7 @@ input[type="search"] {
 }
 
 .card {
-    background-color: white;
+    background-color: var(--light-yellow);
     padding: 30px;
 }
 
@@ -111,6 +122,13 @@ input[type="search"] {
 .all-cards .card .title {
     font-size: 20px;
     font-weight: bold;
+}
+
+.all-cards .card .card-icons {
+    list-style-type: none;
+    /* font-size: 24px; */
+    display: flex;
+    /* gap: 0.5em; */
 }
 
 .news {
