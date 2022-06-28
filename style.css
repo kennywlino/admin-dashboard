@@ -21,7 +21,7 @@
 }
 
 .container > div {
-    padding: 25px 75px;
+    padding: 25px 50px;
 }
 
 .sidebar {
@@ -34,6 +34,7 @@
 .sidebar .logo {
     font-size: 36px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -44,14 +45,16 @@
     gap: 0.5em;
 }
 
+.sidebar .logo img,
+.sidebar li img {
+    padding-right: 0.5em;
+}
+
 .header {
     grid-column: 2;
     background-color: var(--french-blue);
-}
-
-input[type="search"] {
-    -webkit-appearance: none;
-    appearance: none;
+    box-shadow: 0 10px 20px rgba(220, 220, 220, 1);
+    z-index: 2;
 }
 
 .first-row {
@@ -60,10 +63,27 @@ input[type="search"] {
     padding-bottom: 15px;
 }
 
+.first-row .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2.5em;
+    width: 50em;
+    border-radius: 8px;
+    background: rgba(220, 220, 220, 1);
+}
+
 .first-row .user-header {
     justify-self: end;
     font-size: 18px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 1em;
 }
 
 .second-row {
@@ -75,12 +95,11 @@ input[type="search"] {
 .second-row button {
     width: 100px;
     padding: 5px;
-    margin: 0;
-    box-sizing: border-box;
     border: 2px solid rgba(0,0,175,1);
     border-radius: 5px;
     background-color: black;
     color: white;
+    font-size: 14px;
 }
 
 .hello-user {
@@ -93,6 +112,10 @@ input[type="search"] {
 
 .hello-user .user {
     font-size: 30px;
+}
+
+h2 {
+    padding-bottom: 0.5em;
 }
 
 .main-content {
@@ -113,10 +136,14 @@ input[type="search"] {
 .card {
     background-color: var(--light-yellow);
     padding: 30px;
+    border-radius: 8px;
 }
 
 .all-cards .card {
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .all-cards .card .title {
@@ -126,9 +153,9 @@ input[type="search"] {
 
 .all-cards .card .card-icons {
     list-style-type: none;
-    /* font-size: 24px; */
+    align-self: flex-end;
     display: flex;
-    /* gap: 0.5em; */
+    gap: 1em;
 }
 
 .news {
